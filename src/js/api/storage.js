@@ -20,4 +20,13 @@ export default class Storage {
             this.storage = JSON.parse(localStorage.getItem(this.storageName));
         };
     };
+    add(data = {}) {
+        const date = new Date();
+        this.storage.document.push({
+            id: this.storage.document.length + 1 - 1,
+            date: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
+            title: data.title,
+            document: data.document
+        });
+    };
 };
