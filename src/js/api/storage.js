@@ -37,4 +37,11 @@ export default class Storage {
             }
         })
     };
+    remove(id) {
+        this.storage.document.map((document, index) => {
+            if(document.id == id) {
+                this.storage.document.splice(id, 1);
+            }
+        });
+    };
 };
