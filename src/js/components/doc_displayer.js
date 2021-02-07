@@ -2,7 +2,7 @@ export default function docDisplayer(data = []) {
     const documentsList = data.map(document => {
         return `
           <div class="row-c">
-            <div class="name">
+            <div class="name row">
               <i class="fa fa-file"></i>
               <p>${document.title}</p>
             </div>
