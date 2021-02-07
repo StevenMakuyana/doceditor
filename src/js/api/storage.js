@@ -44,4 +44,10 @@ export default class Storage {
             }
         });
     };
+    save() {
+        localStorage.setItem(
+            this.storageName,
+            JSON.stringify(this.storage)
+        );
+    };
 };
