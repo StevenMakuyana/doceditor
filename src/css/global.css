@@ -3,3 +3,8 @@
     opacity: 0%;
 }
 
+.row-c {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
