@@ -29,4 +29,12 @@ export default class Storage {
             document: data.document
         });
     };
+    update(id, data = {}) {
+        this.storage.document.map(document => {
+            if(document.id == id) {
+                document.title = data.title;
+                document.document = data.document
+            }
+        })
+    };
 };
