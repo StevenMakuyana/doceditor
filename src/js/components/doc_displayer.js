@@ -5,7 +5,7 @@ export default function docDisplayer(data = []) {
             <div class="name">
               <i class="fa fa-file"></i>
               <p>${document.title}</p>
-            <div>
+            </div>
             <div class="date">
               <p>${document.date}</p>
             </div>
