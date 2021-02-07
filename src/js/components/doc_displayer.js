@@ -2,11 +2,11 @@ export default function docDisplayer(data = []) {
     const documentsList = data.map(document => {
         return `
           <div class="row-c">
-            <div class="name row">
+            <div class="name row flex1">
               <i class="fa fa-file"></i>
               <p>${document.title}</p>
             </div>
-            <div class="date">
+            <div class="date flex1">
               <p>${document.date}</p>
             </div>
             <i id="context-menu-btn" ctxid="${document.id}" class="fa fa-ellipsis-v"></i>
@@ -21,10 +21,10 @@ export default function docDisplayer(data = []) {
     }).join("");
     const header = `
       <header class="row-c">
-        <div>
+        <div class="flex1">
           <h3>name</h3>
         </div>
-        <div>
+        <div class="flex1">
           <h3>date</h3>
         </div>
       </header>
