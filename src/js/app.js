@@ -39,4 +39,13 @@ mainDropdownEventHandler();
 window.addEventListener('load', function() {
     main.innerHTML = docDisplayer(storage.storage.document);
     contextMenuEventHandler();
+
+    document.querySelectorAll('.delete').forEach(button => {
+        button.onclick = event => {
+            const id = event.target.getAttribute('deleteid');
+            storage.remove(id);
+            storage.save();
+            location.reload();
+        };
+    });
 });
