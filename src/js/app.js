@@ -20,8 +20,23 @@ function mainDropdownEventHandler() {
         });
 };
 
+function contextMenuEventHandler() {
+    document.querySelectorAll('#context-menu-btn').forEach(button => {
+        button.addEventListener('click', event => {
+            const contextMenuID = event.target.getAttribute('ctxid');
+            document.querySelectorAll('.context-menu').forEach(contextMenu => {
+                if(contextMenu.getAttribute('menuid') == contextMenuID) {
+                    Visibility(contextMenu, 'show');
+                    contextMenu.addEventListener('click', () => Visibility(contextMenu, 'hide'));
+                } else Visibility(contextMenu, 'hide');
+            });
+        });
+    });
+};
+
 mainDropdownEventHandler();
 
 window.addEventListener('load', function() {
     main.innerHTML = docDisplayer(storage.storage.document);
+    contextMenuEventHandler();
 });
