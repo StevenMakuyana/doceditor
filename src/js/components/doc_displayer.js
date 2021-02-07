@@ -12,4 +12,22 @@ export default function docDisplayer(data = []) {
           </div>
         `
     }).join("");
+    const header = `
+      <header>
+        <div>
+          <h3>name</h3>
+        </div>
+        <div>
+          <h3>date</h3>
+        </div>
+      </header>
+    `
+    return `
+      <section>
+        ${header}
+        <div>
+          ${documentsList}
+        </div>
+      </section>
+    `
 };
