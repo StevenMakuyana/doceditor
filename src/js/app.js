@@ -1,1 +1,1 @@
-console.log('hello world!')
+import Visibility from './api/visibility.js';
