@@ -1,4 +1,8 @@
+import Storage from './api/storage.js';
 import Visibility from './api/visibility.js';
+
+const storage = new Storage();
+storage.init();
 
 function mainDropdownEventHandler() {
     const mainDropdown = document.getElementById('main-dropdown');
