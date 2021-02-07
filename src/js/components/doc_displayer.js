@@ -9,8 +9,8 @@ export default function docDisplayer(data = []) {
             <div class="date">
               <p>${document.date}</p>
             </div>
-            <i id="context-menu-btn" class="fa fa-ellipsis-v"></i>
-            <nav class="context-menu hidden">
+            <i id="context-menu-btn" ctxid="${document.id}" class="fa fa-ellipsis-v"></i>
+            <nav class="context-menu hidden" menuid="${document.id}">
               <ul>
                 <li openID="${document.id}" class="open">open</li>
                 <li deleteID="${document.id}" class="delete"><i class="fa fa-trash"></i> delete</li>
