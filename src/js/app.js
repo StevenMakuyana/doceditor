@@ -1,5 +1,6 @@
 import Storage from './api/storage.js';
 import Visibility from './api/visibility.js';
+import docDisplayer from './components/doc_displayer.js';
 
 const storage = new Storage();
 storage.init();
