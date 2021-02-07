@@ -1,7 +1,7 @@
 export default function docDisplayer(data = []) {
     const documentsList = data.map(document => {
         return `
-          <div>
+          <div class="row-c">
             <div class="name">
               <i class="fa fa-file"></i>
               <p>${document.title}</p>
@@ -20,7 +20,7 @@ export default function docDisplayer(data = []) {
         `
     }).join("");
     const header = `
-      <header>
+      <header class="row-c">
         <div>
           <h3>name</h3>
         </div>
