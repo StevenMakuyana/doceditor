@@ -2,6 +2,8 @@ import Storage from './api/storage.js';
 import Visibility from './api/visibility.js';
 import docDisplayer from './components/doc_displayer.js';
 
+const main = document.getElementById('main');
+
 const storage = new Storage();
 storage.init();
 
@@ -19,3 +21,7 @@ function mainDropdownEventHandler() {
 };
 
 mainDropdownEventHandler();
+
+window.addEventListener('load', function() {
+    main.innerHTML = docDisplayer(storage.storage.document);
+});
