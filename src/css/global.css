@@ -1,4 +1,5 @@
-i {
-    padding: 10px;
-    border: 1px solid red;
+.hidden {
+    display: none;
+    opacity: 0%;
 }
+
